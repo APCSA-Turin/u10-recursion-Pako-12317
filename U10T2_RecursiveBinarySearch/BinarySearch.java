@@ -41,4 +41,19 @@ public class BinarySearch {
         // target was not found, return -1
         return -1;
     }
+
+    public static int bSearch(int[] arr, int left, int right, int target) {
+        if (right >= left) {
+            int mid = (left + right) / 2;
+            if (arr[mid] == target) {
+            return mid;
+            } else if (arr[mid] > target) {
+            return bSearch(arr, left, mid - 1, target);
+            } else {
+            return bSearch(arr, mid + 1, right, target);
+            }
+        }
+        return -1;
+    }
+
 }
