@@ -1,4 +1,3 @@
-package U10T2_RecursiveBinarySearch;
 
 public class BinarySearch {
 
